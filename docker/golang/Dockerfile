@@ -9,4 +9,5 @@ COPY ./go.mod ./
 RUN go mod download
 EXPOSE 80
 
-CMD ["go", "run", "main.go"]
+# FIX: cmd階層にあるためコマンドは実行させないように変更する
+# CMD ["go", "run", "main.go"]
