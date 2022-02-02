@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  goapp:
+    container_name: goapp
+    build: ./docker/golang
+    tty: true
+    ports:
+      - 8888:80
+    volumes:
+      - ./:/home/go
