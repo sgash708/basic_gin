@@ -3,9 +3,12 @@ version: '3'
 services:
   goapp:
     container_name: goapp
-    build: ./docker/golang
+    # REF: https://qiita.com/mk-tool/items/1c7e4929055bb3b7aeda
+    build:
+      context: .
+      dockerfile: ./docker/golang/Dockerfile
     tty: true
     ports:
       - 8888:80
     volumes:
-      - ./:/home/go
+      - ./:/go/src/app
