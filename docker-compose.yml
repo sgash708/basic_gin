@@ -9,6 +9,6 @@ services:
       dockerfile: ./docker/golang/Dockerfile
     tty: true
     ports:
-      - 8888:80
+      - 3030:3030
     volumes:
       - ./:/go/src/app
